@@ -1,0 +1,68 @@
+name: whisper_speech_recognition
+config_type: model
+vocab_size: 51865
+num_mel_bins: 80
+encoder_layers: 12
+encoder_attention_heads: 12
+decoder_layers: 12
+decoder_attention_heads: 12
+num_hidden_layers: 12
+decoder_ffn_dim: 3072
+encoder_ffn_dim: 3072
+encoder_layerdrop: 0.0
+decoder_layerdrop: 0.0
+decoder_start_token_id: 50258
+use_cache: true
+sampling_rate: 16000
+is_encoder_decoder: true
+activation_function: gelu
+d_model: 768
+dropout: 0.0
+torch_dtype: float32
+attention_dropout: 0.0
+activation_dropout: 0.0
+init_std: 0.02
+scale_embedding: false
+max_source_positions: 1500
+max_target_positions: 448
+pad_token_id: 50257
+bos_token_id: 50257
+eos_token_id: 50257
+suppress_tokens: []
+begin_suppress_tokens:
+- 220
+- 50257
+use_weighted_layer_sum: false
+classifier_proj_size: 256
+apply_spec_augment: false
+mask_time_prob: 0.05
+mask_time_length: 10
+mask_time_min_masks: 2
+mask_feature_prob: 0.0
+mask_feature_length: 10
+mask_feature_min_masks: 0
+max_new_tokens: 444
+generation_config:
+  alignment_heads: null
+  begin_suppress_tokens:
+  - 220
+  - 50256
+  bos_token_id: 50257
+  decoder_start_token_id: 50258
+  eos_token_id: 50257
+  forced_decoder_ids:
+  - - 1
+    - null
+  - - 2
+    - 50359
+  is_multilingual: true
+  max_initial_timestamp_index: 50
+  max_length: 448
+  no_timestamps_token_id: 50363
+  pad_token_id: 50257
+  prev_sot_token_id: 50361
+  return_timestamps: false
+  suppress_tokens: null
+  task_to_id:
+    transcribe: 50359
+    translate: 50358
